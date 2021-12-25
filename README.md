@@ -14,4 +14,4 @@ warning: the current mod does not seek to disrespect the original creator Goldba
 - [x] *Distribution of the items redone for the current version of the game.*
 
 
-> ## Warning Note: the current mod does not seek to disrespect the original creator Goldbar and the original mod is only about reviving this fantastic idea.
+> ## Warning Note: the current mod does not seek to disrespect the original creator <a href="https://steamcommunity.com/profiles/76561198028518023">Goldbar</a> and <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2438225189&searchtext=EasyPacking">the original mod</a> is only about reviving this fantastic idea.
