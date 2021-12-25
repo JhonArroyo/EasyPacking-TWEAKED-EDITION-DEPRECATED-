@@ -6,7 +6,7 @@ Fix patch ( Distribution/Procuderal Renewed )
 
 > ## NOTE VERSION 1.0
 
- - [x] "Certain recipes were removed as they were currently causing bugs
-       with    the current version of the game."
+*- [x] "Certain recipes were removed as they were currently causing bugs
+       with    the current version of the game.*
 
- - [x] "Distribution/Produceral of the items redone for the current version of the game."
+*- [x] Distribution of the items redone for the current version of the game.*
