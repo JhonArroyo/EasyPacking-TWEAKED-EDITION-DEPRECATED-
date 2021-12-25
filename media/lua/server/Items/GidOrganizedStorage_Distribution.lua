@@ -7,13 +7,13 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_metalShelves_medical", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -23,19 +23,19 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_metalShelves_medical", min=1, max=2, weightChance=100},
             }
         },
         shelves = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_shelves_medical", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -45,13 +45,13 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_metalShelves_medical", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -60,25 +60,25 @@ local distributionTable =
         locker = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         counter = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         crate = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         }
     },
@@ -87,25 +87,25 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         crate = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         locker = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -115,13 +115,13 @@ local distributionTable =
         crate = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         }
     },
@@ -131,25 +131,25 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         crate = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-                {name="EasyPackingItems", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
         shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_misc", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -159,13 +159,13 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_counter_cafes", min=1, max=2, weightChance=100},
             }
         },
         displaycase = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_displaycase_cafe", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -175,19 +175,19 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},            
+				{name="EasyPackingItems_counter_cafe", min=1, max=2, weightChance=100},            
 			}
         },
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},            
+				{name="EasyPackingItems_create_cafe", min=1, max=2, weightChance=100},            
 			}
         },
         restaurantdisplay = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},            
+				{name="EasyPackingItems_restaurantdisplay_cafe", min=1, max=2, weightChance=100},            
 			}
         },
     },
@@ -197,37 +197,38 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},            
+				{name="EasyPackingItems_store_counter", min=1, max=2, weightChance=100},            
 			}
         },
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},            
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},            
 			}
         },
         freezer = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},            
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},            
 			}
         },
         fridge = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},            
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},            
 			}
         },
         metal_shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_metal_shelves", min=1, max=2, weightChance=100},
             }
         },
         shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_shelves", min=1, max=2, weightChance=100},
             }
         }
     },
@@ -237,43 +238,38 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_counter", min=1, max=2, weightChance=100},
             }
         },
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        displaycasebakery = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},  
             }
         },
         freezer = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         fridge = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_metal_shelves", min=1, max=2, weightChance=100},
             }
         },
         shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_shelves", min=1, max=2, weightChance=100},
             }
         }
     },
@@ -283,13 +279,14 @@ local distributionTable =
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},  
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_metal_shelves", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -299,37 +296,39 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_counter", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100}, 
             }
         },
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},  
             }
         },
         freezer = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         fridge = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_metal_shelves", min=1, max=2, weightChance=100},
             }
         },
         shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_shelves", min=1, max=2, weightChance=100},
             }
         }
     },
@@ -339,19 +338,21 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_counter", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100}, 
             }
         },
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},  
             }
         },
         fridge = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         freezer = {
@@ -363,13 +364,13 @@ local distributionTable =
         metal_shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_metal_shelves", min=1, max=2, weightChance=100},
             }
         },
         shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_shelves", min=1, max=2, weightChance=100},
             }
         }
     },
@@ -379,19 +380,21 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_counter", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100}, 
             }
         },
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
+                {name="EasyPackingItems_counter_medical", min=1, max=2, weightChance=100},  
             }
         },
         fridge = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         freezer = {
@@ -403,13 +406,13 @@ local distributionTable =
         shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_shelves", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_metal_shelves", min=1, max=2, weightChance=100},
             }
         },
 
@@ -420,25 +423,13 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_counter", min=1, max=2, weightChance=100},
             }
         },
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        displaycasebakery = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        displaycasebutcher = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
             }
         },
         freezer = {
@@ -450,28 +441,13 @@ local distributionTable =
         fridge = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        grocerstand = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        smallbox = {
-            rolls = 1,
-            items = {
-                "GroceryBag1", 10,
-                "GroceryBag2", 10,
-                "GroceryBag3", 10,
-                "GroceryBag4", 10,
+				{name="EasyPackingItems_store_shelves", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -481,13 +457,7 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        displaycasebutcher = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_counter", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -497,25 +467,13 @@ local distributionTable =
         counter = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_counter", min=1, max=2, weightChance=100},
             }
         },
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        displaycasebakery = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        displaycasebutcher = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
             }
         },
         freezer = {
@@ -527,34 +485,13 @@ local distributionTable =
         fridge = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        grocerstand = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        smallcrate = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        smallbox = {
-            rolls = 1,
-            items = {
-                "GroceryBag1", 10,
-                "GroceryBag2", 10,
-                "GroceryBag3", 10,
-                "GroceryBag4", 10,
+				{name="EasyPackingItems_store_shelves", min=1, max=2, weightChance=100},
             }
         },
     },
@@ -564,7 +501,7 @@ local distributionTable =
         crate = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_create", min=1, max=2, weightChance=100},
             }
         },
         freezer = {
@@ -576,28 +513,13 @@ local distributionTable =
         fridge = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_fridge_freezer", min=1, max=2, weightChance=100},
             }
         },
         metal_shelves = {
             procedural = true,
             procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
-            }
-        },
-        smallbox = {
-            rolls = 1,
-            items = {
-                "GroceryBag1", 10,
-                "GroceryBag2", 10,
-                "GroceryBag3", 10,
-                "GroceryBag4", 10,
-            }
-        },
-        smallcrate = {
-            procedural = true,
-            procList = {
-				{name="EasyPackingItems", min=1, max=2, weightChance=100},
+				{name="EasyPackingItems_store_metal_shelves", min=1, max=2, weightChance=100},
             }
         },
     },
