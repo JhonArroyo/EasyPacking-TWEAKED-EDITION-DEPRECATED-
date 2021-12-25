@@ -1,4 +1,4 @@
-# EasyPacking-TWEAKED-
+# EasyPacking (TWEAKED EDITION)
 <img src="https://github.com/JhonArroyo/EasyPacking-TWEAKED-/blob/main/poster.png?raw=true" width="255" height="255" />
 Fix patch ( Distribution/Procuderal Renewed )
 </br>
