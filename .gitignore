@@ -337,3 +337,5 @@ ASALocalRun/
 /g.txt
 /hello.txt
 /list_items_distribution.txt
+/media/lua/server/items/GidOrganizedStorage_Distribution copy.lua
+/media/lua/server/items/GidOrganizedStorage_ProceduralDistribution copy.lua
