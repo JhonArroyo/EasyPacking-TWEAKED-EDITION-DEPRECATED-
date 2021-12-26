@@ -10,7 +10,7 @@ module Packing
 	item 6pkBeerCan
 	{
 		Weight			= 0.9,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Beer Can,
 		Icon			= PBeerCan,
 	}
@@ -18,7 +18,7 @@ module Packing
 	item 6pkBeer
 	{
 		Weight			= 1.2,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Beer Bottle,
 		Icon			= PBeer,
 	}
@@ -138,7 +138,7 @@ module Packing
 	item 6pkDogFood
 	{
 		Weight			= 3,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Dog Food,
 		Icon			= PDogFood,
 	}
@@ -178,7 +178,7 @@ module Packing
 	item 10pkWhiteWine
 	{
 		Weight			= 5,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 10 x Chardonnay,
 		Icon			= PWhiteWine,
 	}
@@ -186,7 +186,7 @@ module Packing
 	item 5pkWhiteWine
 	{
 		Weight			= 3.5,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 5 x Chardonnay,
 		Icon			= PWhiteWine,
 	}
@@ -194,7 +194,7 @@ module Packing
 	item 10pkOrangeSoda
 	{
 		Weight			= 4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 10 x Orange Soda,
 		Icon			= POrangeSoda,
 	}
@@ -202,7 +202,7 @@ module Packing
 	item 5pkOrangeSoda
 	{
 		Weight			= 2.8,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 5 x Orange Soda,
 		Icon			= POrangeSoda,
 	}
@@ -210,7 +210,7 @@ module Packing
 	item 10pkWhiskey
 	{
 		Weight			= 3.5,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 10 x Whiskey,
 		Icon			= PWhiskey,
 	}
@@ -218,7 +218,7 @@ module Packing
 	item 5pkWhiskey
 	{
 		Weight			= 2.45,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 5 x Whiskey,
 		Icon			= PWhiskey,
 	}
@@ -226,7 +226,7 @@ module Packing
 	item 10pkRedWine
 	{
 		Weight			= 5,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 10 x Red Wine,
 		Icon			= PRedWine,
 	}
@@ -234,7 +234,7 @@ module Packing
 	item 5pkRedWine
 	{
 		Weight			= 3.5,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 5 x Red Wine,
 		Icon			= PRedWine,
 	}

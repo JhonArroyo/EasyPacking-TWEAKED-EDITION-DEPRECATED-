@@ -9,7 +9,7 @@ module GidOrganizedFood
 	item OS6pkPopDiet
 	{
 		Weight			= 1.5,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Diet Pop,
 		Icon			= OS6pkPopDiet,
 	}
@@ -17,7 +17,7 @@ module GidOrganizedFood
 	item OS6pkPop
 	{
 		Weight			= 1.5,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Pop,
 		Icon			= OS6pkPop,
 	}
@@ -25,7 +25,7 @@ module GidOrganizedFood
 	item OS6pkFizz
 	{
 		Weight			= 1.5,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Fizz Pop,
 		Icon			= OS6pkFizz,
 	}
@@ -33,7 +33,7 @@ module GidOrganizedFood
 	item OS6pkCannedSoup
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Soup,
 		Icon			= OS6pkCannedSoup,
 	}
@@ -41,7 +41,7 @@ module GidOrganizedFood
 	item OS6pkCannedBeans
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Beans,
 		Icon			= OS6pkCannedBeans,
 	}
@@ -49,7 +49,7 @@ module GidOrganizedFood
 	item OS6pkCannedBolognese
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Bolognese,
 		Icon			= OS6pkCannedBolognese,
 	}
@@ -57,7 +57,7 @@ module GidOrganizedFood
 	item OS6pkCannedCarrots
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Carrots,
 		Icon			= OS6pkCannedCarrots,
 	}
@@ -65,7 +65,7 @@ module GidOrganizedFood
 	item OS6pkCannedChili
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Chili,
 		Icon			= OS6pkCannedChili,
 	}
@@ -73,7 +73,7 @@ module GidOrganizedFood
 	item OS6pkCannedCorn
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Corn,
 		Icon			= OS6pkCannedCorn,
 	}
@@ -81,7 +81,7 @@ module GidOrganizedFood
 	item OS6pkCannedCornedBeef
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Corned Beef,
 		Icon			= OS6pkCannedCornedBeef,
 	}
@@ -89,7 +89,7 @@ module GidOrganizedFood
 	item OS6pkCannedMushSoup
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Mushroom Soup,
 		Icon			= OS6pkCannedMushSoup,
 	}
@@ -97,7 +97,7 @@ module GidOrganizedFood
 	item OS6pkCannedPeas
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Peas,
 		Icon			= OS6pkCannedPeas,
 	}
@@ -105,7 +105,7 @@ module GidOrganizedFood
 	item OS6pkCannedPotato
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Potato,
 		Icon			= OS6pkCannedPotato,
 	}
@@ -113,7 +113,7 @@ module GidOrganizedFood
 	item OS6pkCannedTomato
 	{
 		Weight			= 2.4,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 6 x Canned Tomato,
 		Icon			= OS6pkCannedTomato,
 	}
@@ -121,14 +121,14 @@ module GidOrganizedFood
 	item OS8pkCannedTuna
 	{
 		Weight			= 1.2,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 8 x Canned Tuna,
 		Icon			= OS8pkCannedTuna,
 	}
 	item OS4pkSardines
 	{
 		Weight			= 1.6,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 4 x Canned Sardines,
 		Icon			= OS4pkSardines,
 	}
@@ -136,7 +136,7 @@ module GidOrganizedFood
 	item OS4pkCoffee
 	{
 		Weight			= 2,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 4 x Instant Coffee,
 		Icon			= OS4pkCoffee,
 	}
@@ -176,7 +176,7 @@ module GidOrganizedFood
 	item OS24pkWaterBottleFull
 	{
 		Weight			= 9.6,
-		Type			= Normal,
+		Type			= Food,
 		DisplayName		= 24 x Full Water Bottles,
 		Icon			= OS24pkWaterBottleFull,
 	}

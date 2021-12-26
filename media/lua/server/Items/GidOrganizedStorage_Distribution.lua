@@ -1,2759 +1,1143 @@
-Distributions = Distributions or {};
+require 'Items/ProceduralDistributions'
 
-local distributionTable = 
-{
-	medicalstorage = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-    },
+--Medical_packs_1
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS30pkAntibiotics");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS12pkAdhesiveBandages");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS9pkBandages");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS9pkSterileBandages");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS12pkCottonBalls");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS9pkBandagesDirty");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS50pkPainkillers");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS50pkVitamins");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS50pkBetaBlockers");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS50pkAntidepressant");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS50pkSleepingPills");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS4pkDisinfectant");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, "GidOrganized.OS30pkAlcoholWipes");
+table.insert(ProceduralDistributions.list["MedicalClinicDrugs"].items, 10);
 
-	pharmacystorage = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandag10,es", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBcounters", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-    },
+--Medical_packs_1
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS30pkAntibiotics");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS12pkAdhesiveBandages");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS9pkBandages");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS9pkSterileBandages");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS12pkCottonBalls");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS9pkBandagesDirty");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS50pkPainkillers");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS50pkVitamins");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS50pkBetaBlockers");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS50pkAntidepressant");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS50pkSleepingPills");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS4pkDisinfectant");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "GidOrganized.OS30pkAlcoholWipes");
+table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, 10);
 
-	medical = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandag10,es", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-    },
+--Misc_packs_1
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.OS4pkDuctTape");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkScrapMetal");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkScrapMetal");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkRopeBranch");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkRopeBranch");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkRopePlank");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkRopePlank");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkGarbage");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkGarbage");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSoap");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSoap");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkTissue");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkTissue");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkThread");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkThread");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkWire");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkWire");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkFishingLine");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkFishingLine");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkTwine");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkTwine");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkMatches");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkMatches");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSheetMetal");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSheetMetal");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkMetalBar");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkMetalBar");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkMetalPipe");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkMetalPipe");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkRope");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkRope");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkSheetRope");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkSheetRope");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkLighter");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkLighter");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkWoodGlue");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkWoodGlue");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkGlue");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkGlue");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.4pkToiletPaper");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkFishingNet");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkFishingNet");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkBattery");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.5pkBattery");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.50pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.100pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkRag");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.50pkRag");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.100pkRag");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkDenim");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.50pkDenim");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.100pkDenim");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.10pkLeather");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.50pkLeather");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, "GidOrganized.100pkLeather");
+table.insert(ProceduralDistributions.list["ToolStoreMisc"].items, 10);
 
-	shed = {
-        locker = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-    },
+--Misc_packs_2
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.OS4pkDuctTape");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkScrapMetal");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkScrapMetal");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkRopeBranch");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkRopeBranch");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkRopePlank");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkRopePlank");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkGarbage");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkGarbage");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSoap");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSoap");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkTissue");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkTissue");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkThread");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkThread");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkWire");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkWire");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkFishingLine");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkFishingLine");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkTwine");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkTwine");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkMatches");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkMatches");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSheetMetal");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSheetMetal");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkMetalBar");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkMetalBar");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkMetalPipe");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkMetalPipe");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkRope");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkRope");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkSheetRope");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkSheetRope");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkLighter");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkLighter");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkWoodGlue");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkWoodGlue");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkGlue");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkGlue");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.4pkToiletPaper");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkFishingNet");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkFishingNet");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkBattery");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.5pkBattery");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.50pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.100pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkRag");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.50pkRag");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.100pkRag");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkDenim");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.50pkDenim");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.100pkDenim");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.10pkLeather");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.50pkLeather");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartTools"].items, "GidOrganized.100pkLeather");
+table.insert(ProceduralDistributions.list["GigamartTools"].items, 10);
 
-	garagestorage = {
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        locker = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-    },
+--Misc_packs_3
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.OS4pkDuctTape");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkScrapMetal");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkScrapMetal");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkRopeBranch");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkRopeBranch");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkRopePlank");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkRopePlank");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkGarbage");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkGarbage");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSoap");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSoap");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkTissue");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkTissue");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkThread");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkThread");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkWire");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkWire");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkFishingLine");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkFishingLine");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkTwine");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkTwine");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkMatches");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkMatches");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSheetMetal");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSheetMetal");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkMetalBar");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkMetalBar");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkMetalPipe");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkMetalPipe");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkRope");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkRope");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkSheetRope");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkSheetRope");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkLighter");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkLighter");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkWoodGlue");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkWoodGlue");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkGlue");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkGlue");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.4pkToiletPaper");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkFishingNet");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkFishingNet");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkBattery");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.5pkBattery");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.50pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.100pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkRag");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.50pkRag");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.100pkRag");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkDenim");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.50pkDenim");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.100pkDenim");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.10pkLeather");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.50pkLeather");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, "GidOrganized.100pkLeather");
+table.insert(ProceduralDistributions.list["CrateCarpentry"].items, 10);
 
-	toolstorage = {
-        isShop = true,
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-    },
+--Misc_packs_4
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.OS4pkDuctTape");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkScrapMetal");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkScrapMetal");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkRopeBranch");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkRopeBranch");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkRopePlank");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkRopePlank");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkGarbage");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkGarbage");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSoap");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSoap");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkTissue");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkTissue");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkThread");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkThread");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkWire");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkWire");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkFishingLine");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkFishingLine");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkTwine");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkTwine");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkMatches");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkMatches");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkMetalBar");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkMetalBar");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkRope");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkRope");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkSheetRope");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkSheetRope");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkLighter");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkLighter");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkWoodGlue");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkWoodGlue");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkGlue");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkGlue");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.4pkToiletPaper");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkFishingNet");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkFishingNet");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkBattery");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.5pkBattery");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.50pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.100pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkRag");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.50pkRag");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.100pkRag");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkDenim");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.50pkDenim");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.100pkDenim");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.10pkLeather");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.50pkLeather");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, "GidOrganized.100pkLeather");
+table.insert(ProceduralDistributions.list["CrateMetalwork"].items, 10);
 
-    toolstore = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },   
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,            
-            },    
-        },
-    },
+--Misc_packs_5
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.OS4pkDuctTape");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkScrapMetal");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkScrapMetal");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkRopeBranch");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkRopeBranch");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkRopePlank");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkRopePlank");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkGarbage");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkGarbage");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSoap");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSoap");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkTissue");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkTissue");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkThread");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkThread");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkWire");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkWire");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkFishingLine");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkFishingLine");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkTwine");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkTwine");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkMatches");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkMatches");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSheetMetal");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkMetalBar");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkMetalBar");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkMetalPipe");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkRope");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkRope");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkSheetRope");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkSheetRope");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkLighter");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkLighter");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkWoodGlue");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkWoodGlue");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkGlue");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkGlue");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.4pkToiletPaper");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkFishingNet");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkFishingNet");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkBattery");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.5pkBattery");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.50pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.100pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkRag");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.50pkRag");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.100pkRag");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkDenim");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.50pkDenim");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.100pkDenim");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.10pkLeather");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.50pkLeather");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, "GidOrganized.100pkLeather");
+table.insert(ProceduralDistributions.list["CrateMechanics"].items, 10);
 
-	cafe = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-            },    
-        },
-        displaycase = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-            },  
-        },
-    },
+--Misc_packs_6
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.OS4pkDuctTape");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkRopeSheetMetal");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSheetRopeSheetMetal");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkScrapMetal");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkScrapMetal");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkRopeMetalBar");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSheetRopeMetalBar");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkRopeMetalPipe");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSheetRopeMetalPipe");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkRopeBranch");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkRopeBranch");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSheetRopeBranch");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSheetRopePlank");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkRopePlank");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkRopePlank");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkGarbage");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkGarbage");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSoap");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSoap");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkTissue");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkTissue");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkThread");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkThread");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkWire");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkWire");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkFishingLine");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkFishingLine");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkTwine");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkTwine");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkMatches");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkMatches");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSheetMetal");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSheetMetal");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSheetMetalSmall");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkMetalBar");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkMetalBar");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkMetalPipe");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkMetalPipe");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkRope");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkRope");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkSheetRope");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkSheetRope");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkLighter");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkLighter");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkWoodGlue");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkWoodGlue");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkGlue");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkGlue");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.4pkToiletPaper");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkFishingNet");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkFishingNet");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkBattery");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.5pkBattery");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.50pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.100pkElectronicsScrap");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkRag");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.50pkRag");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.100pkRag");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkDenim");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.50pkDenim");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.100pkDenim");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.10pkLeather");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.50pkLeather");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, "GidOrganized.100pkLeather");
+table.insert(ProceduralDistributions.list["GarageMechanics"].items, 10);
 
-    cafekitchen = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-            },
-        },
-        restaurantdisplay = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-            },
-        },
-    },
+--Food_Drink_Packs_1
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.OS6pkPopDiet");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.OS6pkPop");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkFizz");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedSoup");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedBeans");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedBolognese");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedCarrots");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedChili");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedCorn");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedCornedBeef");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedMushSoup");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedPeas");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedPotato");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedTomato");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS8pkCannedTuna");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS4pkSardines");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS4pkCoffee");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.OS24pkWaterBottleFull");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.6pkBeerCan");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.6pkBeer");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.6pkDogFood");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.20pkCigarettes");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.10pkWhiteWine");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.5pkWhiteWine");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.10pkOrangeSoda");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.5pkOrangeSoda");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.10pkWhiskey");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.5pkWhiskey");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.10pkRedWine");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.5pkRedWine");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
 
-	conveniencestore = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-            },    
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,          
-			},
-        },
-        freezer = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,            
-			},
-        },
-        fridge = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,            
-			},
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-
-	cornerstore = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        freezer = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        fridge = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-
-    cornerstorestorage = {
-        isShop = true,
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-
-	gasstore = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS4pkDuctTape", 10,
-                "GidOrganized.10pkRopeSheetMetal", 10,
-                "GidOrganized.5pkRopeSheetMetal", 10,
-                "GidOrganized.10pkSheetRopeSheetMetal", 10,
-                "GidOrganized.5pkSheetRopeSheetMetal", 10,
-                "GidOrganized.10pkScrapMetal", 10,
-                "GidOrganized.5pkScrapMetal", 10,
-                "GidOrganized.10pkRopeMetalBar", 10,
-                "GidOrganized.5pkRopeMetalBar", 10,
-                "GidOrganized.10pkSheetRopeMetalBar", 10,
-                "GidOrganized.5pkSheetRopeMetalBar", 10,
-                "GidOrganized.10pkRopeMetalPipe", 10,
-                "GidOrganized.5pkRopeMetalPipe", 10,
-                "GidOrganized.10pkSheetRopeMetalPipe", 10,
-                "GidOrganized.5pkSheetRopeMetalPipe", 10,
-                "GidOrganized.10pkRopeBranch", 10,
-                "GidOrganized.5pkRopeBranch", 10,
-                "GidOrganized.10pkSheetRopeBranch", 10,
-                "GidOrganized.5pkSheetRopeBranch", 10,
-                "GidOrganized.10pkSheetRopePlank", 10,
-                "GidOrganized.5pkSheetRopePlank", 10,
-                "GidOrganized.10pkRopePlank", 10,
-                "GidOrganized.5pkRopePlank", 10,
-                "GidOrganized.10pkGarbage", 10,
-                "GidOrganized.5pkGarbage", 10,
-                "GidOrganized.10pkSoap", 10,
-                "GidOrganized.5pkSoap", 10,
-                "GidOrganized.10pkTissue", 10,
-                "GidOrganized.5pkTissue", 10,
-                "GidOrganized.10pkThread", 10,
-                "GidOrganized.5pkThread", 10,
-                "GidOrganized.10pkWire", 10,
-                "GidOrganized.5pkWire", 10,
-                "GidOrganized.10pkFishingLine", 10,
-                "GidOrganized.5pkFishingLine", 10,
-                "GidOrganized.10pkTwine", 10,
-                "GidOrganized.5pkTwine", 10,
-                "GidOrganized.10pkMatches", 10,
-                "GidOrganized.5pkMatches", 10,
-                "GidOrganized.10pkSheetMetal", 10,
-                "GidOrganized.5pkSheetMetal", 10,
-                "GidOrganized.10pkSheetMetalSmall", 10,
-                "GidOrganized.5pkSheetMetalSmall", 10,
-                "GidOrganized.10pkMetalBar", 10,
-                "GidOrganized.5pkMetalBar", 10,
-                "GidOrganized.10pkMetalPipe", 10,
-                "GidOrganized.5pkMetalPipe", 10,
-                "GidOrganized.10pkRope", 10,
-                "GidOrganized.5pkRope", 10,
-                "GidOrganized.10pkSheetRope", 10,
-                "GidOrganized.5pkSheetRope", 10,
-                "GidOrganized.10pkLighter", 10,
-                "GidOrganized.5pkLighter", 10,
-                "GidOrganized.10pkWoodGlue", 10,
-                "GidOrganized.5pkWoodGlue", 10,
-                "GidOrganized.10pkGlue", 10,
-                "GidOrganized.5pkGlue", 10,
-                "GidOrganized.4pkToiletPaper", 10,
-                "GidOrganized.210pkFishingNet", 10,
-                "GidOrganized.5pkFishingNet", 10,
-                "GidOrganized.10pkBattery", 10,
-                "GidOrganized.5pkBattery", 10,
-                "GidOrganized.10pkElectronicsScrap", 10,
-                "GidOrganized.50pkElectronicsScrap", 10,
-                "GidOrganized.100pkElectronicsScrap", 10,
-                "GidOrganized.10pkRag", 10,
-                "GidOrganized.50pkRag", 10,
-                "GidOrganized.100pkRag", 10,
-                "GidOrganized.10pkDenim", 10,
-                "GidOrganized.50pkDenim", 10,
-                "GidOrganized.100pkDenim", 10,
-                "GidOrganized.10pkLeather", 10,
-                "GidOrganized.50pkLeather", 10,
-                "GidOrganized.100pkLeather", 10,   
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        freezer = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        fridge = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-
-    generalstore = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        fridge = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        freezer = {
-            rolls = 3,
-            items = {
-
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-
-    generalstorestorage = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-                "GidOrganized.OS12pkAdhesiveBandages", 10,
-                "GidOrganized.OS9pkBandages", 10,
-                "GidOrganized.OS9pkSterileBandages", 10,
-                "GidOrganized.OS12pkCottonBalls", 10,
-                "GidOrganized.OS50pkPainkillers", 10,
-                "GidOrganized.OS50pkVitamins", 10,
-                "GidOrganized.OS50pkBetaBlockers", 10,
-                "GidOrganized.OS50pkAntidepressants", 10,
-                "GidOrganized.OS50pkSleepingPills", 10,
-                "GidOrganized.OS4pkDisinfectant", 10,
-                "GidOrganized.OS30pkAlcoholWipes", 10,
-                "GidOrganized.OS30pkAntibiotics", 10,
-            },
-        },
-        fridge = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        freezer = {
-            rolls = 3,
-            items = {
-
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-
-	gigamart = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        freezer = {
-            rolls = 3,
-            items = {
-
-            },
-        },
-        fridge = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-
-    gigamartkitchen = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-            },
-        },
-    },
-
-    grocery = {
-        isShop = true,
-        counter = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-            },
-        },
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        freezer = {
-            rolls = 3,
-            items = {
-
-            },
-        },
-        fridge = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-
-    grocerystorage = {
-        isShop = true,
-        crate = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        freezer = {
-            rolls = 3,
-            items = {
-
-            },
-        },
-        fridge = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-        metal_shelves = {
-            rolls = 3,
-            items = {
-                "GidOrganized.OS6pkPopDiet", 10,
-                "GidOrganized.OS6pkPop", 10,
-                "GidOrganized.OS6pkFizz", 10,
-                "GidOrganized.OS6pkCannedSoup", 10,
-                "GidOrganized.OS6pkCannedBeans", 10,
-                "GidOrganized.OS6pkCannedBolognese", 10,
-                "GidOrganized.OS6pkCannedCarrots", 10,
-                "GidOrganized.OS6pkCannedChili", 10,
-                "GidOrganized.OS6pkCannedCorn", 10,
-                "GidOrganized.OS6pkCannedCornedBeef", 10,
-                "GidOrganized.OS6pkCannedMushSoup", 10,
-                "GidOrganized.OS6pkCannedPeas", 10,
-                "GidOrganized.OS6pkCannedPotato", 10,
-                "GidOrganized.OS6pkCannedTomato", 10,
-                "GidOrganized.OS8pkCannedTuna", 10,
-                "GidOrganized.OS4pkSardines", 10,
-                "GidOrganized.OS4pkCoffee", 10,
-                "GidOrganized.OS24pkWaterBottleFull", 10,
-                "GidOrganized.6pkBeerCan", 10,
-                "GidOrganized.6pkBeer", 10,
-                "GidOrganized.6pkDogFood", 10,
-                "GidOrganized.20pkCigarettes", 10,
-                "GidOrganized.10pkWhiteWine", 10,
-                "GidOrganized.5pkWhiteWine", 10,
-                "GidOrganized.10pkOrangeSoda", 10,
-                "GidOrganized.5pkOrangeSoda", 10,
-                "GidOrganized.10pkWhiskey", 10,
-                "GidOrganized.5pkWhiskey", 10,
-                "GidOrganized.10pkRedWine", 10,
-                "GidOrganized.5pkRedWine", 10,
-            },
-        },
-    },
-}
-
-table.insert(Distributions, 10, distributionTable);
+--Food_Drink_Packs_2
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkPopDiet");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkPop");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkFizz");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedSoup");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedBeans");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedBolognese");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedCarrots");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedChili");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedCorn");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedCornedBeef");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedMushSoup");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedPeas");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedPotato");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS6pkCannedTomato");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS8pkCannedTuna");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS4pkSardines");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS4pkCoffee");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.OS24pkWaterBottleFull");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.6pkBeerCan");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.6pkBeer");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.6pkDogFood");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.20pkCigarettes");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.10pkWhiteWine");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.5pkWhiteWine");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.10pkOrangeSoda");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.5pkOrangeSoda");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.10pkWhiskey");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.5pkWhiskey");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.10pkRedWine");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, "GidOrganized.5pkRedWine");
+table.insert(ProceduralDistributions.list["CrateCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.OS6pkPopDiet");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.OS6pkPop");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkFizz");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedSoup");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedBeans");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedBolognese");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedCarrots");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedChili");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedCorn");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedCornedBeef");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedMushSoup");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedPeas");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedPotato");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS6pkCannedTomato");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS8pkCannedTuna");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS4pkSardines");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.OS4pkCoffee");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.OS24pkWaterBottleFull");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.6pkBeerCan");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.6pkBeer");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.6pkDogFood");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, "GidOrganized.20pkCigarettes");
+table.insert(ProceduralDistributions.list["GigamartCannedFood"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.10pkWhiteWine");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.5pkWhiteWine");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.10pkOrangeSoda");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.5pkOrangeSoda");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.10pkWhiskey");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.5pkWhiskey");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.10pkRedWine");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, "GidOrganized.5pkRedWine");
+table.insert(ProceduralDistributions.list["GigamartBottles"].items, 10);
+table.insert(ProceduralDistributions.list["CrateCoffee"].items, "GidOrganized.OS4pkCoffee");
+table.insert(ProceduralDistributions.list["CrateCoffee"].items, 10);
